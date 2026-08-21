@@ -28,7 +28,7 @@ while True:
             case 1:
                 sleep(1)
                 header("Listagem de Produtos")
-                #listProducts(arc)
+                listproducts(arc)
 
             case 2:
                 sleep(1)
@@ -37,11 +37,11 @@ while True:
                         header('Cadastro de Produtos')
                         product = str(input("Nome do produto: "))
                         qtde = int(input("Quantidade: "))
-                        price = float(input("Preço: ").replace(".",","))
-                    except:
+                        price = float(input("Preço: ").replace(",","."))
+                    except :
                         print("Houve um erro na entrada dos dados!, Tente novamente")
                     else:
-                        #register(product,qtde,price)
+                        register(arc,product,qtde,price)
                         cho = input("Voce deseja cadastrar mais produtos?(S/N): ").capitalize().upper()
 
                         if cho == "S":
